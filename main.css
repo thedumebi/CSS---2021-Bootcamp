@@ -1,6 +1,6 @@
 #product-overview {
   background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
-    url("images/andrea.jpg") left 10% bottom 80% / cover no-repeat border-box
+    url("images/andrea.jpg") left 50% bottom 80% / cover no-repeat border-box
       fixed,
     #ff1b68;
   /* background-image: url("andrea.jpg");
@@ -24,15 +24,9 @@
   ); */
   width: 100%;
   /* height: 528px; */
-  height: 50vh;
-  margin-top: 2.75rem;
+  height: 60vh;
   /* border: 5px dashed white; */
   position: relative;
-}
-
-.section-title {
-  color: #2ddf5c;
-  text-align: center;
 }
 
 #product-overview h1 {
@@ -41,12 +35,12 @@
   position: absolute;
   bottom: 5%;
   left: 3%;
-  margin: 0;
+  /* margin: 0; */
+  font-size: 1.6rem;
 }
 
-.plan__list {
-  width: 90%;
-  margin: auto;
+.section-title {
+  color: #2ddf5c;
   text-align: center;
 }
 
@@ -54,16 +48,13 @@
   background: #d5ffdc;
   text-align: center;
   padding: 1rem;
-  margin: 0.5rem;
-  display: inline-block;
-  width: 30%;
-  vertical-align: middle;
+  margin: 0.5rem 0 2rem;
+  width: 100%;
 }
 
 .plan--highlighted {
   background: #19b84c;
   color: white;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .plan__annotation {
@@ -72,6 +63,9 @@
   padding: 0.6rem;
   box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
   border-radius: 20px;
+  width: 40%;
+  margin: auto;
+  min-width: 12rem;
 }
 
 .plan__title {
@@ -119,10 +113,7 @@
 }
 
 .key-feature {
-  display: inline-block;
-  width: 30%;
-  text-align: center;
-  vertical-align: top;
+  margin: 1rem 0
 }
 
 .key-feature__image {
@@ -199,4 +190,62 @@ p::first-letter {
 .modal__action--negative:active {
   background: #ff5454;
   border-color: #ff5454;
+}
+
+@media (min-width: 40rem) {
+  #product-overview {
+    height: 85vh;
+    background-position: 50% 25%;
+  }
+
+  #product-overview h1 {
+    font-size: 3rem;
+  }
+
+  
+
+  .key-feature {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    max-width: 25rem;
+    margin: 0
+  }
+}
+
+@media (min-width: 40rem) and (min-height: 48rem) {
+  #product-overview {
+    height: 85vh;
+    background-position: left 50% bottom 0;
+  }
+}
+
+@media (min-width: 40rem) and (orientation: landscape) {
+  #product-overview {
+    height: 100vh;
+    background-position: left 50% bottom 100%;
+  }
+
+  .plan__list {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .plan {
+    display: inline-block;
+    width: 30%;
+    margin: 0.5rem;
+    vertical-align: middle;
+    min-width: 12rem;
+    max-width: 25rem;
+  }
+
+  .plan--highlighted {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .plan__annotation {
+    min-width: 11rem;
+  }
 }
