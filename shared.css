@@ -8,7 +8,7 @@ body {
 }
 
 main {
-  min-height: calc(100vh - 3.5rem - 8.3rem);
+  min-height: calc(100vh - 3.5rem - 8rem);
   margin-top: 3.5rem;
 }
 
@@ -194,6 +194,13 @@ main {
   outline: none;
 }
 
+.btn[disabled] {
+  cursor: not-allowed;
+  border: #a1a1a1;
+  background: #ccc;
+  color: #a1a1a1;
+}
+
 .open {
   display: block !important;
 }
@@ -219,7 +226,7 @@ main {
   .main-nav__item {
     display: inline-block;
     margin: 0 16px;
-    padding: 1.2rem 0.2rem;
+    padding: 1rem 0.2rem;
   }
 
   .main-footer__link {
