@@ -62,9 +62,10 @@ main {
 .package__info {
   background: white;
   padding: 1rem;
-  font-size: 1.2rem;
   color: #0e4f1f;
   border: 1px solid #0e4f1f;
+  font-size: 1.2rem;
+  /* font-style font-variant font-weight font-size/line-height font-family */
 }
 
 .clear-fix {
