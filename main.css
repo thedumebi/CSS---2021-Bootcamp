@@ -142,12 +142,15 @@ p::first-letter {
 }
 
 .modal {
-  position: fixed;
   display: none;
+  position: fixed;
+  opacity: 0;
+  transform: translateY(-3rem);
+  transition: opacity 200ms ease-out,
+    transform 500ms cubic-bezier(0.21, 0.65, 0.68, 0.19);
   z-index: 200;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 30%;
+  left: 30%;
   width: 40%;
   background: white;
   padding: 2rem;
@@ -210,10 +213,6 @@ p::first-letter {
     vertical-align: top;
     max-width: 25rem;
     margin: 0;
-  }
-
-  .modal {
-    max-width: 30%;
   }
 
   .modal__title {

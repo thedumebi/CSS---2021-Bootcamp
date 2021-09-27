@@ -10,8 +10,14 @@ for (var i = 0; i < selectPlanButtons.length; i++) {
     // backdrop.style.display = "block";
     // modal.style.display = "block";
     // backdrop.className = "open"; //This would actually overwrite the complete class list
-    backdrop.classList.add("open");
-    modal.classList.add("open");
+    backdrop.style.display = "block";
+    setTimeout(() => {
+      backdrop.classList.add("open");
+    }, 10);
+    modal.style.display = "block";
+    setTimeout(() => {
+      modal.classList.add("open");
+    }, 10);
   });
 }
 
@@ -29,8 +35,14 @@ function closeModal() {
   //   backdrop.style.display = "none";
   //   modal.style.display = "none";
   backdrop.classList.remove("open");
+  setTimeout(() => {
+    backdrop.style.display = "none";
+  }, 200);
   if (modal) {
     modal.classList.remove("open");
+    setTimeout(() => {
+      modal.style.display = "none";
+    }, 200);
   }
 }
 
@@ -38,5 +50,8 @@ toggleButton.addEventListener("click", function () {
   //   mobileNav.style.display = "block";
   //   backdrop.style.display = "block";
   mobileNav.classList.add("open");
-  backdrop.classList.add("open");
+  backdrop.style.display = "block";
+  setTimeout(() => {
+    backdrop.classList.add("open");
+  }, 10);
 });
